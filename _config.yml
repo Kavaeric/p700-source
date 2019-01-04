@@ -3,6 +3,7 @@ author: Kavaeric
 markdown: kramdown
 
 destination: ../p700
+baseurl: /p700
 exclude: [README.md, testlocal.sh]
 
 humanize:
