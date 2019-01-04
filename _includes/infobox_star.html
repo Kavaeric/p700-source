@@ -1,0 +1,109 @@
+<div class="infobox">
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" class="title">{{ include.name | default: "???" }}</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="subtitle">   
+                {{ include.name | default: "???" }} &#9656; 
+                <a href="{{ include.quarter | replace: ' ', '_' }}.html">{{ include.quarter | default: "???" }}</a></td>
+        </tr>
+
+        {% if include.image != null %}
+        <tr>
+            <td colspan="2">
+                <a data-fancybox="gallery" href="media/{{include.image}}">
+                    <img src="media/thumb-{{include.image}}">
+                    <span>{{ include.caption }}</span>
+                </a>
+            </td>
+        </tr>
+        {% endif %}
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="infoname">Catalogue name</td>
+            <td>{{ include.catname }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Catalogued</td>
+            <td>{{ include.cattime }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Demonyms</td>
+            <td>{{ include.demonym }}</td>
+        </tr>
+
+        {% if include.coord != null %}
+        <tr>
+            <td class="infoname" rowspan="2">Coordinates</td>
+            <td>{{ include.coord }}</td>
+        </tr>
+        {% endif %}
+
+        <tr><th colspan="2">Stellar characteristics</th></tr>
+        <tr>
+            <td class="infoname">Spectral class</td>
+            <td>{{ include.class }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Absolute magnitude</td>
+            <td>{{ include.mag }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Photospheric temperature</td>
+            <td>{{ include.temp }} K</td>
+        </tr>
+
+        <tr><th colspan="2">Physical characteristics</th></tr>
+        <tr>
+            <td class="infoname" rowspan="2">Mass</td>
+            <td>{{ include.mass }} kg</td>
+        </tr>
+        <tr>
+            <td>{{ include.relmass }} M<a href="Earth.html"><sub>&#9737;</sub></a></td>
+        </tr>
+        <tr>
+            <td class="infoname" rowspan="2">Mean radius</td>
+            <td>{{ include.radius }} km</td>
+        </tr>
+        <tr>
+            <td>{{ include.relradius }} R<a href="Earth.html"><sub>&#9737;</sub></a></td>
+        </tr>
+
+        <tr>
+            <td class="infoname">Surface gravity</td>
+            <td>{{ include.grav }} m/s<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td class="infoname">Age</td>
+            <td>{{ include.age }}</td>
+        </tr>
+
+        {% if include.pop != null or include.affil != null or include.settled != null or include.capital != null%}
+            <tr><th colspan="2">Habitation</th></tr>
+            <tr>
+                <td class="infoname">System population</td>
+                <td>{{ include.pop }}</td>
+            </tr>
+            <tr>
+                <td class="infoname">Affiliation</td>
+                <td>{{ include.affil | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+            </tr>
+            <tr>
+                <td class="infoname">Settled</td>
+                <td>{{ include.settled }}</td>
+            </tr>
+
+            {% if include.capital != null %}
+            <tr>
+                <td class="infoname">Political capital</td>
+                <td>{{ include.capital | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+            </tr>
+            {% endif %}
+        {% endif %}
+    </tbody>
+</table>
+</div>

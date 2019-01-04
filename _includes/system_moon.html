@@ -1,0 +1,10 @@
+<div class="moon">
+    <div class="disc" style="border-color: #{{ include.colour }};
+                             width: {{ include.diameter }}em;
+                             height: {{ include.diameter }}em;"></div>
+    {% if include.article != null %}
+    <div class="title"><a href="{{ include.article }}">{{ include.name }}</a></div>
+    {% else %}
+    <div class="title">{{ include.name }}</div>
+    {% endif %}
+</div>

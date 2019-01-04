@@ -1,0 +1,130 @@
+/* modal.css */
+
+/* Custom CSS styling for FancyBox */
+div.fancybox_container {
+    display: block;
+    clear: both; /* Stops modals close to each other from stacking side-by-side */
+    width: 20em; /* Setting this will also line-break any caption text to be below the image */
+    margin: 1em auto; /* Default centering alignment */
+    
+    font-size: .8em;
+
+    border-style: solid;
+    border-color: var(--cl-w20) transparent; /* Borders on top and bottom only, but keep bevels */
+    border-width: 2px;
+}
+@media only screen and (min-width: 640px) {
+    div.fancybox_container.left {
+        float: left;
+        clear: left;
+        margin-left: 0; /* No spacing between the edge of the box and the edge of the content div */
+        margin-right: 3em;
+    }
+    div.fancybox_container.right {
+        float: right;
+        clear: right;
+        margin-left: 3em;
+        margin-right: 0;
+    }
+}
+
+a[data-fancybox] {
+    display: block;        /* IT'S JUST ONE OF THOSE DAYS YOU DON'T WANT TO WAKE UP */
+    padding: .5em 1em;     /* EVERYTHING IS F--KED EVERYBODY SUCKS                  */
+}
+a[data-fancybox]:hover,
+a[data-fancybox]:focus {
+    background: var(--cl-w5);
+}
+a[data-fancybox]:active {
+    background: var(--cl-w10);
+}
+
+a[data-fancybox] > img {
+    max-width: 100%; /* Image must be contained in parent box element */
+    max-height: 30em;
+    margin: auto;
+}
+
+div.fancybox_container > p {
+    margin: .2em 1em .5em 1em;
+    color: #fff;
+}
+
+.fancybox-container {
+    font-family: HKGrotesk, sans-serif;
+    font-size: 1.5em;
+}
+.fancybox-container * {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.fancybox-bg {
+    background: #000;
+}
+.fancybox-is-open .fancybox-bg {
+    opacity: .7;
+}
+.fancybox-button,
+.fancybox-navigation .fancybox-button {
+    height: 3em;
+    width: 3em;
+    transition: none;
+}
+.fancybox-show-nav .fancybox-navigation .fancybox-button {
+    transition: none;
+}
+
+.fancybox-button {
+    background-color: transparent;
+}
+.fancybox-button:hover,
+.fancybox-button:focus {
+    color: var(--cl-accent);
+}
+
+.fancybox-navigation .fancybox-button:hover,
+.fancybox-navigation .fancybox-button:focus {
+    background: transparent;
+}
+
+.fancybox-button:active,
+.fancybox-navigation .fancybox-button:active {
+    color: var(--cl-background);
+    background-color: var(--cl-accent);
+}
+
+.fancybox-thumbs {
+    background: var(--cl-background);
+}
+.fancybox-thumbs-active {
+    border: none;
+}
+
+.fancybox-caption a,
+.fancybox-caption a:link,
+.fancybox-caption a:visited {
+    text-decoration: none;
+    color: var(--cl-accent);
+}
+.fancybox-caption a:hover,
+.fancybox-caption a:focus {
+    outline-style: none;
+    background: var(--cl-w20);
+}
+.fancybox-caption a:active {
+    background: var(--cl-accent);
+    color: var(--cl-background)
+}
+
+/* Infobox modals */
+.infobox a[data-fancybox] {
+    width: 100%;
+    padding: .5em 0;
+    margin: 0;
+
+    border: none;
+}

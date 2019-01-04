@@ -1,0 +1,17 @@
+<div class="infobar wip">
+    <div class="header">
+        Redirect
+    </div> 
+
+    <div class="sym">
+        <img src="{{ site.baseurl }}/img/warning.svg">
+    </div>
+
+    <div class="info">
+        Redirecting to <a href="{{ include.pageurl }}">{{ include.pagetitle }}</a>.
+    </div>
+</div>
+
+<script>
+    window.location.replace("{{ include.pageurl }}#{{ include.pageheader }} ");
+</script> 

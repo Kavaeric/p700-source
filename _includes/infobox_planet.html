@@ -1,0 +1,245 @@
+<div class="infobox">
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" class="title">{{ include.name | default: "???" }}</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="subtitle">
+                {{ include.name | default: "???" }} &#9656; 
+                {% if include.parent != null %}
+                <a href="{{ include.parent | replace: ' ', '_'}}.html">{{ include.parent | default: "???" }}</a> &#9656;
+                {% endif %} 
+                <a href="{{ include.system | replace: ' ', '_' }}.html">{{ include.system | default: "???" }}</a>
+                {% if include.quarter != null %} &#9656;
+                <a href="{{ include.quarter | replace: ' ', '_' }}.html">{{ include.quarter | default: "???" }}</a></td>
+                {% endif %}
+        </tr>
+
+        {% if include.image != null %}
+        <tr>
+            <td colspan="2">
+                <a data-fancybox="gallery" href="media/{{include.image}}">
+                    <img src="media/thumb-{{include.image}}">
+                </a>
+                {% if include.caption != null %}
+                <div class="caption">
+                    {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+                </div>
+                {% endif %}
+            </td>
+        </tr>
+        {% endif %}
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="infoname">Catalogue name</td>
+            <td>{{ include.catname }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Catalogued</td>
+            <td>{{ include.cattime }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Demonyms</td>
+            <td>{{ include.demonym }}</td>
+        </tr>
+
+        {% if reldist != null %}
+        <tr><th colspan="2">Orbital characteristics</th></tr>
+        <tr>
+            <td class="infoname" rowspan="2">Semimajor axis</td>
+            <td>{{ include.dist }} km</td>
+        </tr>
+        <tr>
+            <td>{{ include.reldist }} AU</td>
+        </tr>
+        {% else %}
+        <tr><th colspan="2">Orbital characteristics</th></tr>
+        <tr>
+            <td class="infoname">Semimajor axis</td>
+            <td>{{ include.dist }} km</td>
+        </tr>
+        {% endif %}
+
+        <tr>
+            <td class="infoname">Orbital period</td>
+            <td>{{ include.year }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Eccentricity</td>
+            <td>{{ include.ecc }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Sidereal day</td>
+            <td>{{ include.sidereal }}</td>
+        </tr>
+
+        {% if include.synodic != null %}
+        <tr>
+            <td class="infoname">Synodic day</td>
+            <td>{{ include.synodic }}</td>
+        </tr>
+        {% endif %}
+
+        {% if include.sats != null %}
+        <tr>
+            <td class="infoname">Satellites</td>
+            <td>{{ include.sats | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        <tr><th colspan="2">Physical characteristics</th></tr>
+        <tr>
+            {% comment %}
+                We need to calculate the mass of the body. With all the zeroes. All. Of. Them.
+            {% endcomment %}
+            {% assign massExpMult = 1.0 %}
+            {% for i in (1..include.massExp) %}
+                {% assign massExpMult = massExpMult | times: 10.0 %}
+            {% endfor %}
+
+            {% assign mass = include.massBase | times: massExpMult %}
+
+            {% assign EARTHMASS = 5972198600000000000000000.0 %}
+            {% assign LUNAMASS = 73459000000000000000000.0 %}
+            
+            <td class="infoname" rowspan="2">Mass</td>
+            <td>{{ include.massBase }} &#215; 10<sup>{{ include.massExp }}</sup> kg</td>
+        </tr>
+        <tr>            
+            {% if include.massExp <= 22 and include.name != "Luna" %}
+            <td>{{ mass | divided_by: LUNAMASS | round: 3 }} M<a href="Luna.html"><sub>&#9790;</sub></a></td>
+            {% elsif include.massExp <= 24 %}
+            <td>{{ mass | divided_by: EARTHMASS | round: 3 }} M<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% elsif include.massExp <= 25 %}
+            <td>{{ mass | divided_by: EARTHMASS | round: 2 }} M<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% else %}
+            <td>{{ mass | divided_by: EARTHMASS | round: 1 }} M<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td class="infoname" rowspan="2">Mean radius</td>
+            <td>{{ include.radius | intcomma }} km</td>
+        </tr>
+        <tr>
+            {% if include.parent !=null or include.radius <= 1600.0 %}
+            <td>{{ include.radius | divided_by: 1737.0 | round: 3 }} R<a href="Luna.html"><sub>&#9790;</sub></a></td>
+            {% else %}
+            <td>{{ include.radius | divided_by: 6371.0 | round: 3 }} R<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td class="infoname" rowspan="2">Surface gravity</td>
+            <td>{{ include.grav }} m/s<sup>2</sup></td>
+        </tr>
+        <tr>
+            {% if include.grav <= 1.0 %}
+            <td>{{ include.grav | divided_by: 9.81 | round: 4 }} g<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% elsif include.grav <= 15.0 %}
+            <td>{{ include.grav | divided_by: 9.81 | round: 3 }} g<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% else %}
+            <td>{{ include.grav | divided_by: 9.81 | round: 2 }} g<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            {% endif %}
+        </tr>
+
+        <tr><th colspan="2">Climate and atmosphere</th></tr>
+        {% if include.pressure != null %}
+            {% if include.pressure == "0" %}
+            <tr>
+                <td class="infoname">Surface pressure</td>
+                <td>Trace</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td class="infoname" rowspan="2">Surface pressure</td>
+                <td>{{ include.pressure }} kPa</td>
+            </tr>
+            <tr>
+                <td>{{ include.relpressure }} Atm<a href="Earth.html"><sub>&#8853;</sub></a></td>
+            </tr>
+            {% endif %}
+        {% endif %}
+
+        {% if include.composition != null %}
+        <tr>
+            <td class="infoname">Composition</td>
+            <td>{{ include.composition | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        {% if include.ktemp != null %}
+        <tr>
+            <td class="infoname" rowspan="2">Median temperature</td>
+            <td>{{ include.ktemp | minus: 273.15 | round }} &deg;C</td>
+        </tr>
+        <tr>
+            <td>{{ include.ktemp }} K</td>
+        </tr>
+        {% elsif include.kmeantemp != null %}
+            {% if include.khightemp != null %}
+            <tr>
+                <td class="infoname" rowspan="2">High temperature</td>
+                <td>{{ include.khightemp | minus: 273.15 | round }} &deg;C</td>
+            </tr>
+            <tr>
+                <td>{{ include.khightemp }} K</td>
+            </tr>
+            {% endif %}
+        <tr>
+            <td class="infoname" rowspan="2">Mean temperature</td>
+            <td>{{ include.kmeantemp | minus: 273.15 | round }} &deg;C</td>
+        </tr>
+        <tr>
+            <td>{{ include.kmeantemp }} K</td>
+        </tr>
+            {% if include.klowtemp != null %}
+            <tr>
+                <td class="infoname" rowspan="2">Low temperature</td>
+                <td>{{ include.klowtemp | minus: 273.15 | round }} &deg;C</td>
+            </tr>
+            <tr>
+                <td>{{ include.klowtemp }} K</td>
+            </tr>
+            {% endif %}
+        {% endif %}
+
+        <tr><th colspan="2">Habitation</th></tr>
+        <tr>
+            <td class="infoname">Population</td>
+            <td>{{ include.pop }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Affiliation</td>
+            <td>{{ include.affil | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Settled</td>
+            <td>{{ include.settled }}</td>
+        </tr>
+
+        {% if include.capital != null %}
+        <tr>
+            <td class="infoname">Political capital</td>
+            <td>{{ include.capital | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        {% if include.largest != null %}
+        <tr>
+            <td class="infoname">Largest settlement</td>
+            <td>{{ include.largest | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        {% if include.major != null %}
+        <tr>
+            <td class="infoname">Major settlements</td>
+            <td>{{ include.major | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+    </tbody>
+</table>
+</div>
+

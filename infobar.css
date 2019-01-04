@@ -1,0 +1,70 @@
+/* infobar.css */
+
+div.infobar {
+    width: 90%;
+    margin: .5em auto;
+    border-bottom: 2px solid var(--cl-w20);
+
+    display: grid;
+    grid-template-rows: 2em auto;
+    grid-template-columns: 5em auto;
+    grid-template-areas:
+        "header header"
+        "sym info";
+
+    font-size: .8em;
+
+    animation-name: flash;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .1s;
+    animation-fill-mode: both;
+}
+
+div.infobar div.header {
+    grid-area: header;
+
+    font-weight: 500;
+    text-align: center;
+    line-height: 2em;
+
+    background: var(--cl-w10);
+}
+
+div.infobar div.sym {
+    grid-area: sym;
+    display: block;
+    width: 100%;
+    padding: 1em 0;
+}
+div.infobar div.sym img {
+    display: block;
+    width: 80%;
+    margin: auto;
+
+    animation-name: flash;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .2s;
+    animation-fill-mode: both;
+}
+div.infobar div.info {
+    grid-area: info;
+    display: inline-block;
+    padding: 1em 0;
+    margin: auto .5em;
+}
+
+/* The infobar would be too cramped on a small screen */
+/* On larger screens though, the image can be made    */
+/* larger, and the bar given more breathing room      */
+@media only screen and (min-width: 640px) {
+    div.infobar {
+        width: 35em;
+        grid-template-columns: 7em auto;
+    }
+
+    div.infobar div.info {
+        margin: auto 1em;
+    }
+}

@@ -1,0 +1,366 @@
+/* style.css */
+
+/* Define a colour palette */
+:root {
+    --cl-default: #ff5400;
+
+    --cl-background: #1E1F20;
+    --cl-purple: #ff19c2;
+    --cl-red: #ff2051;
+    --cl-redlight: #d3a6b0;
+    --cl-orange: #ff7066;
+    --cl-yellow: #ffce74;
+    --cl-yellowlight: #e4d8b1;
+    --cl-green: #4effc4;
+    --cl-blue: #4f87ff;
+    --cl-bluegrey: #9dadd1;
+
+    --cl-w5:  rgba(255, 255, 255, .05);
+    --cl-w10: rgba(255, 255, 255, .1);
+    --cl-w20: rgba(255, 255, 255, .2);
+    --cl-w50: rgba(255, 255, 255, .5);
+}
+
+/* Getting some fonts in */
+@font-face {
+    font-family: HKGrotesk;
+    src: url(fonts/HKGroteskPro-Light.woff);
+    font-weight: 300;
+}
+@font-face {
+    font-family: HKGrotesk;
+    src: url(fonts/HKGroteskPro-Regular.woff);
+    font-weight: 400;
+}
+@font-face {
+    font-family: HKGrotesk;
+    src: url(fonts/HKGroteskPro-Medium.woff);
+    font-weight: 500;
+}
+@font-face {
+    font-family: HKCarta;
+    src: url(fonts/HKCarta-Medium.woff);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: HKGrotesk, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+
+    background: var(--cl-background);
+}
+@media only screen and (min-width: 640px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 960px) {
+    body {
+        font-size: 18px
+    };
+}
+@media only screen and (min-width: 1280px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+a,
+a:link,
+a:visited {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--cl-accent);
+}
+a:hover,
+a:focus {
+    outline-style: none;
+    background: var(--cl-w20);
+}
+a:active {
+    background: var(--cl-accent);
+    color: var(--cl-background)
+}
+
+strong {
+    font-weight: 600;
+}
+
+p, h1, h2, h3 {
+    font-family: HKGrotesk, sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    line-height: 1em;
+}
+
+h1 {
+    display: block;
+    margin: .3em 0;
+    border-bottom: 2px solid var(--cl-accent);
+    padding-bottom: .1em;
+
+    font-size: 2.5em;
+}
+@media only screen and (min-width: 640px) {
+    h1 {
+        font-size: 3.2em;
+    }
+}
+@media only screen and (min-width: 960px) {
+    h1 {
+        font-size: 4em;
+    }
+}
+
+
+h2 {
+    display: inline-block;
+    min-width: 40%;
+    margin: .5em 0 0 0;
+    border-bottom: 2px solid var(--cl-accent);
+    padding-bottom: .2em;
+
+    font-size: 2em;
+}
+
+h3 {
+    display: inline-block;
+    min-width: 20%;
+    margin: .5em 0 0 0;
+    border-bottom: 2px solid var(--cl-w20);
+    padding-bottom: .2em;
+
+    font-size: 1.3em;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+h3 + p {
+    margin-top: .6em; /* Reduce line spacing between h3s and paragraphs */
+}
+
+img {
+    display: block; /* Probably more appropriate for the kinds of things I do here */
+}
+
+sup {
+    font-size: .6em;
+}
+
+/* Custom serif tag */
+sr {
+    font-family: HKCarta, serif;
+}
+
+table {
+    min-width: 75%;
+    max-width: 100%;
+    margin: .5em auto;
+    clear: both;
+    border-collapse: collapse;
+}
+th, td {
+    padding: .3em 1em;
+    border-bottom: 1.5px solid var(--cl-w5);
+}
+th {
+    padding: .5em 1em;
+    font-weight: 300;
+    background-color: var(--cl-w10);
+}
+
+blockquote {
+    margin-left: 1em;
+    padding: .5em 1em;
+    border-left: 2px solid var(--cl-accent);
+
+    background-color: var(--cl-w5);
+}
+
+blockquote > p {
+    margin: .5em 0;
+}
+
+/* Custom bullet styling */
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+ul li {
+    margin: .4em 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+ul li:before {
+    content: "\25B8";
+    padding-right: 5px;
+    color: var(--cl-w50);
+}
+
+/* Classes start here */
+.grid-container {
+    min-height: 50vh;
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 5em 2em 1fr 8em;
+    grid-gap: 0;
+    grid-template-areas: 
+        "navbar"
+        "bracket-top"
+        "content"
+        "bracket-bottom"
+}
+
+.button:hover,
+.button:focus {
+    outline-style: solid;
+    outline-width: 1.5px;
+}
+
+/* Bracket decorations */
+.contentBracketTop,
+.contentBracketBottom {
+    height: 1em;
+    width: 60em;
+    max-width: 90vw; /* Scales down if the screen is too narrow */
+
+    border-style: solid;
+    display: flex;
+}
+.contentBracketTop {
+    grid-area: "bracket-top";
+    margin: 1em auto 0 auto;
+
+    border-width: .1em .2em .2em .2em;  /* Varying the borders like this renders really neat */
+    border-color: var(--cl-w20) #fff transparent #fff;
+}
+.contentBracketBottom {
+    grid-area: "bracket-bottom";
+    margin: 1em auto 0 auto;
+
+    border-width: .2em .2em .1em .2em;
+    border-color: transparent #fff var(--cl-w20) #fff;
+}
+@media only screen and (min-width: 640px) {
+    .contentBracketTop {
+        border-width: .1em .4em .4em .4em;
+    }
+    .contentBracketBottom {
+        border-width: .4em .4em .1em .4em;
+    }
+}
+
+.content {
+    grid-area: "content";
+    grid-column: 1;
+    grid-row: 3;
+    width: 50em;
+    max-width: 85vw; /* Scales down if the screen is too narrow */
+    margin: 0 auto;
+}
+
+div.systemDiagram {
+    width: 100%;
+    clear: both;
+    padding: 2em;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(4em, max-content);
+
+    border-style: solid;
+    border-color: var(--cl-w20) transparent; /* Borders on top and bottom only, but keep bevels */
+    border-width: 5px;
+}
+
+div.systemDiagram .object {
+    display: grid;
+    margin: .5em 0;
+    grid-template-columns: 8em auto;
+    grid-template-rows: 1.5em minmax(.7em, 1fr);
+    grid-column-gap: 2em;
+}
+
+div.systemDiagram div.disc {
+    height: 1em;
+    width: 1em;
+    box-sizing: border-box;
+    margin: auto auto;
+
+    grid-area: 1 / 1 / 3 / 2;
+
+    border-width: .2em;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 100%;
+}
+div.systemDiagram div.disc div.ring {
+    position: relative;
+    top: 50%;
+    /* left: -50%; /* Centre the ring */
+    height: .2em;
+    width: 100%;
+    margin-top: -.1em; /* Compensate for the offset */
+
+    border-style: solid;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+div.systemDiagram div.belt {
+    height: .2em;
+    width: 100%;
+    margin: auto auto;
+    grid-area: 1 / 1 / 3 / 2;
+
+    border-width: .2em 0 .2em 0;
+    border-style: solid;
+    border-color: #fff;
+}
+
+div.systemDiagram div.object > div.title {
+    height: 100%;
+    /* To centre text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1.2em;
+}
+div.systemDiagram div.object > div.title.center {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+div.systemDiagram div.object > div.moons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 9em);
+    grid-auto-rows: 2em;
+}
+
+div.systemDiagram div.object > div.moons > div.moon {
+    display: grid;
+    grid-template-columns: 2em auto;
+    line-height: 2em;
+}
+
+div.systemDiagram div.object > div.moons > div.moon div.disc {
+    border-width: .15em;
+}
+
+@keyframes flash {
+    0%   { opacity: 0.0; }
+    40%  { opacity: 0.7; }
+    60%  { opacity: 0.4; }
+    100% { opacity: 1.0; }
+}

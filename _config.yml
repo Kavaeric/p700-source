@@ -1,0 +1,9 @@
+title: +700
+author: Kavaeric
+markdown: kramdown
+
+destination: ../p700
+exclude: [README.md, testlocal.sh]
+
+humanize:
+    date_format: "%d/%m/%Y"

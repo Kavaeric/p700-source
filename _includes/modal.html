@@ -1,0 +1,16 @@
+{% assign filepath = "media/" | append: include.file %}
+
+{% if include.selfthumb == true %}
+    {% assign thumbpath = filepath %}
+{% else %}
+    {% assign thumbpath = "media/thumb-" | append: include.file %}
+{% endif %}
+
+<div class="fancybox_container {{include.align | default: 'right'}}">
+    <a data-fancybox="gallery"
+       data-caption='{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}'
+       href="{{ filepath }}">
+        <img src="{{ thumbpath | default: filepath }}">
+    </a>
+    {{ include.caption | markdownify }}
+</div>

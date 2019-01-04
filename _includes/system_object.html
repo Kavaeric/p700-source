@@ -1,0 +1,39 @@
+<div class="object">
+    {% if include.type == "body" %}
+    <div class="disc" style="width: {{ include.diameter }}em;
+                             height: {{ include.diameter }}em;
+                             {% if include.axis != null %}
+                             transform: rotate({{ include.axis }}deg);
+                             {% endif %}">
+        {% if include.ringsize != null %}
+        <div class="ring" style="border-width: 0 {{ include.ringsize }}em;
+                                 left: -{{ include.ringsize }}em;">
+        </div>
+        {% endif %}
+    </div>
+    {% elsif include.type == "star" %}
+    <div class="disc" style="background-color: #fff;
+                             width: {{ include.diameter }}em;
+                             height: {{ include.diameter }}em;"></div>
+    {% elsif include.type == "belt" %}
+    <div class="belt"></div>
+    {% endif %}
+
+    {% if include.moons != null %}
+    <div class="title">
+        <div>
+        {% if include.article != null %}<a href="{{ include.article }}">{% endif %}
+        {{ include.name }}
+        {% if include.article != null %}</a>{% endif %}
+        </div>
+    </div>
+    <div class="moons">{{ include.moons }}</div>
+    {% else %}
+    <div class="title center">
+        <div>
+        {% if include.article != null %}<a href="{{ include.article }}">{% endif %}
+        {{ include.name }}
+        {% if include.article != null %}</a>{% endif %}</div></div>
+    {% endif %}
+</div>
+

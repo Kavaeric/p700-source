@@ -1,0 +1,89 @@
+<div class="infobox">
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" class="title">{{ include.name | default: "???" }}</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="subtitle">
+                {{ include.fullname }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a data-fancybox="gallery" href="media/{{include.flag}}">
+                    <img src="media/thumb-{{include.flag}}">
+                </a>
+            </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="infoname">Motto</td>
+            <td style="font-style: italic;">{{ include.motto }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Demonyms</td>
+            <td>{{ include.demonym }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Capital</td>
+            <td>{{ include.capital | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Official languages</td>
+            <td>{{ include.lang | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        <tr><th colspan="2">Demographics</th></tr>
+        <tr>
+            <td class="infoname">Population</td>
+            <td>{{ include.population }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Ethnic groups</td>
+            <td>{{ include.ethnic | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        <tr><th colspan="2">Governance</th></tr>
+        <tr>
+            <td class="infoname">Government</td>
+            <td>{{ include.gov | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        {% if include.exec != null %}
+        <tr>
+            <td class="infoname">Executive branch</td>
+            <td>{{ include.exec | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        {% if include.legis != null %}
+        <tr>
+            <td class="infoname">Legislature</td>
+            <td>{{ include.legis | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        {% endif %}
+
+        <tr>
+            <td class="infoname">Formation</td>
+            <td>{{ include.formation | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        <tr><th colspan="2">Economy</th></tr>
+        <tr>
+            <td class="infoname">Currency</td>
+            <td>{{ include.currency | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">GDP</td>
+            <td>{{ include.gdp | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">GDP per capita</td>
+            <td>{{ include.percap | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

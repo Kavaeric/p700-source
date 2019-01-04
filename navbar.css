@@ -1,0 +1,130 @@
+/* navbar.css */
+
+.navbar {
+    grid-area: "navbar";
+    height: 100%;
+    max-width: 90vw; /* Scales down the content page if the screen is too narrow */
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar > * {
+    margin: 0 .5em;
+}
+.navbar > *:first-child {
+    margin: 0;
+    margin-right: 1em;
+}
+.navbar > *:last-child {
+    margin: 0;
+    margin-left: .5em;
+}
+
+.navbar .button {
+    display: inline-block;
+    height: 2em;
+    width: 10em;
+
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 2em;
+    text-decoration: none;
+    color: #fff;
+
+    background: var(--cl-w10);
+}
+
+.navbar .button:nth-child(2) {
+    outline-color: var(--cl-red);
+}
+.navbar .button:nth-child(2):hover,
+.navbar .button:nth-child(2):focus {
+    color: var(--cl-red);
+}
+.navbar .button:nth-child(2):active {
+    background: var(--cl-red);
+    color: var(--cl-background);
+}
+
+.navbar .button:nth-child(3) {
+    outline-color: var(--cl-blue);
+}
+.navbar .button:nth-child(3):hover,
+.navbar .button:nth-child(3):focus {
+    color: var(--cl-blue);
+}
+.navbar .button:nth-child(3):active {
+    background: var(--cl-blue);
+    color: var(--cl-background);
+}
+
+.navbar .button:nth-child(4) {
+    outline-color: var(--cl-green);
+}
+.navbar .button:nth-child(4):hover,
+.navbar .button:nth-child(4):focus {
+    color: var(--cl-green);
+}
+.navbar .button:nth-child(4):active {
+    background: var(--cl-green);
+    color: var(--cl-background);
+}
+
+.navbar .button:nth-child(5) {
+    outline-color: var(--cl-purple);
+}
+.navbar .button:nth-child(5):hover,
+.navbar .button:nth-child(5):focus {
+    color: var(--cl-purple);
+}
+.navbar .button:nth-child(5):active {
+    background: var(--cl-purple);
+    color: var(--cl-background);
+}
+
+/* +700 logo button */
+#NavLogo {
+    display: inline-block;
+    height: 4em;
+    width: 12em;
+    outline-color: var(--cl-accent);
+
+    opacity: .8;
+    background: url(img/logo.svg);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#NavLogo:hover {
+    outline: none;
+}
+#NavLogo:hover,
+#NavLogo:focus {
+    opacity: 1;
+}
+
+/* If the browser supports fancy CSS masks, we can do some equally fancy logo colourisation */
+/* Edge 17 supports mask-image and mask-size but nothing else from that spec because Edge  */
+@supports (mask-position: center) or (-webkit-mask-position: center) {
+    #NavLogo {
+        opacity: 1;
+        background: #fff;
+        -webkit-mask-image: url(img/logo.svg);
+        -webkit-mask-size: 75%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-image: url(img/logo.svg);
+        mask-size: 75%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+    #NavLogo:hover,
+    #NavLogo:focus {
+        background-color: var(--cl-accent);
+    }
+}

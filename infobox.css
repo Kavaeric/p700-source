@@ -1,0 +1,75 @@
+/* infobox.css */
+
+.infobox {
+    width: 100%;
+    float: none;
+    margin: 1em auto;
+
+    border-style: solid;
+    border-color: var(--cl-w20) transparent; /* Borders on top and bottom only, but keep bevels */
+    border-width: 3px;
+}
+.infobox table {
+    width: 100%;
+    margin: .5em auto; /* Some spacing between the table content and the styled top and bottom */
+    border-collapse: collapse;
+}
+
+@media only screen and (min-width: 760px) {
+    .infobox {
+        width: 20em;
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+
+    .infobox table {
+        width: 95%;
+    }
+}
+
+.infobox td,
+.infobox th {
+    padding: .1em 0;
+    font-size: .8em;
+}
+
+.infobox thead {
+    text-align: center;
+}
+
+.infobox thead .title {
+    font-size: 1.5em;
+}
+
+.infobox thead .subtitle {
+    font-weight: 500;
+}
+
+.infobox thead .mainImg {
+    width: 100%;
+}
+
+.infobox thead .caption {
+    padding-bottom: .4em;
+}
+
+.infobox tbody th {
+    font-weight: 300;
+    padding: .3em 0;
+
+    background-color: var(--cl-w10);
+}
+
+.infobox tbody td {
+    padding: .3em 0;
+    border-top: 1.5px solid var(--cl-w5); /* We don't want a border at the bottom of the body */
+}
+
+.infobox tbody td.infoname {
+    width: 9em;
+    padding-right: .2em;
+
+    word-wrap: break-word;
+
+    color: var(--cl-w50);
+}
