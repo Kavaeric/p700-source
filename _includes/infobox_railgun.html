@@ -37,7 +37,7 @@
 
         <tr><th colspan="2">History</th></tr>
         <tr>
-            <td class="infoname">Designed</td>
+            <td class="infoname">Development</td>
             <td>{{ include.designed }}</td>
         </tr>
         <tr>
@@ -45,7 +45,7 @@
             <td>{{ include.designer | markdownify | remove: '<p>' | remove: '</p>' }}</td>
         </tr>
 
-        {%- if prod != null -%}
+        {%- if include.prod != null -%}
         <tr>
             <td class="infoname">Produced</td>
             <td>{{ include.prod }}</td>
@@ -68,7 +68,11 @@
         {%- if include.massUnl != null -%}
         <tr>
             <td class="infoname">Unloaded mass</td>
+            {%- if include.massUnl >= 1000 -%}
+            <td>{{ include.massUnl | divided_by: 1000.0 | round: 2 }} kg</td>
+            {%- else -%}
             <td>{{ include.massUnl }} g</td>
+            {%- endif -%}
         </tr>
         {%- endif -%}
         {%- if include.massLoad != null -%}
@@ -83,7 +87,7 @@
             <td>{{ include.coreName }}</td>
         </tr>
         <tr>
-            <td>{{ include.coreDimX }}mm &#215; {{ include.coreDimY }}mm {{ include.coreComp }}</td>
+            <td>{{ include.coreDimX }} &#215; {{ include.coreDimY }}mm {{ include.coreComp }}</td>
         </tr>
 
         <tr>
@@ -119,6 +123,18 @@
             <td class="infoname">Bolt temperature</td>
             <td>{{ include.temp | intcomma}} K</td>
         </tr>
+
+        <tr>
+            <td class="infoname">Fire modes</td>
+            <td>{{ include.modes }}</td>
+        </tr>
+        
+        {%- if include.rate != null -%}
+        <tr>
+            <td class="infoname">Rate of fire</td>
+            <td>{{ include.rate | intcomma }} RPM</td>
+        </tr>
+        {%- endif -%}
         
     </tbody>
 </table>
