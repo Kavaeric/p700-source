@@ -1,0 +1,125 @@
+<div class="infobox">
+<table>
+    <thead>
+        <tr>
+            <th colspan="2" class="title">{{ include.name | default: "???" }}</th>
+        </tr>
+        <tr>
+            {%- if include.full != null -%}
+            <td colspan="2" class="subtitle">   
+                {{ include.fullname }}
+            </td>
+            {%- endif -%}
+        </tr>
+
+        {%- if include.image != null -%}
+        <tr>
+            <td colspan="2">
+                <a data-fancybox="gallery" href="media/{{include.image}}">
+                    <img src="media/thumb-{{include.image}}">
+                    <span>{{ include.caption }}</span>
+                </a>
+            </td>
+        </tr>
+        {%- endif -%}
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="infoname">Type</td>
+            <td>{{ include.type }}</td>
+        </tr>
+
+        <tr>
+            <td class="infoname">Affiliation</td>
+            <td>{{ include.affil | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        <tr><th colspan="2">History</th></tr>
+        <tr>
+            <td class="infoname">Designed</td>
+            <td>{{ include.designed }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Designer</td>
+            <td>{{ include.designer | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        {%- if prod != null -%}
+        <tr>
+            <td class="infoname">Produced</td>
+            <td>{{ include.prod }}</td>
+        </tr>
+        {%- endif -%}
+
+        {%- if include.service != null -%}
+        <tr>
+            <td class="infoname">Service</td>
+            <td>{{ include.service }}</td>
+        </tr>
+        {%- endif -%}
+
+        <tr>
+            <td class="infoname">Manufacturer</td>
+            <td>{{ include.manufacturer | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+        </tr>
+
+        <tr><th colspan="2">Specifications</th></tr>
+        {%- if include.massUnl != null -%}
+        <tr>
+            <td class="infoname">Unloaded mass</td>
+            <td>{{ include.massUnl }} g</td>
+        </tr>
+        {%- endif -%}
+        {%- if include.massLoad != null -%}
+        <tr>
+            <td class="infoname">Loaded mass</td>
+            <td>{{ include.massLoad }}</td>
+        </tr>
+        {%- endif -%}
+
+        <tr>
+            <td class="infoname" rowspan="2">Ammunition</td>
+            <td>{{ include.coreName }}</td>
+        </tr>
+        <tr>
+            <td>{{ include.coreDimX }}mm &#215; {{ include.coreDimY }}mm {{ include.coreComp }}</td>
+        </tr>
+
+        <tr>
+            <td class="infoname">Feed</td>
+            <td>{{ include.feed }}</td>
+        </tr>
+        <tr>
+            <td class="infoname">Muzzle velocity</td>
+            <td>{{ include.velocity | intcomma }} m/s</td>
+        </tr>
+        {%- if include.coreComp == "tungstic" -%}
+            {%- assign mass60 = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 14.750 | times: 0.001 -%}
+            {%- assign mass87 = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 17.788 | times: 0.001 -%}
+            {%- assign energyKin60 = mass60 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
+            {%- assign energyKin87 = mass87 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
+            <tr>
+                <td class="infoname">Kinetic energy (Tungsten 60%)</td>
+                <td>{{ energyKin60 | round | intcomma }} J</td>
+            </tr>
+            <tr>
+                <td class="infoname">Kinetic energy (Tungsten 87%)</td>
+                <td>{{ energyKin87 | round | intcomma }} J</td>
+            </tr>
+        {%- elsif include.coreComp == "ferrous" -%}
+            {%- assign massFe = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 9.85 | times: 0.001 -%}
+            {%- assign energyKinFe = mass60 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
+            <tr>
+                <td class="infoname">Kinetic energy</td>
+                <td>{{ energyKin60 | round | intcomma }} J</td>
+            </tr>
+        {%- endif -%}
+        <tr>
+            <td class="infoname">Bolt temperature</td>
+            <td>{{ include.temp | intcomma}} K</td>
+        </tr>
+        
+    </tbody>
+</table>
+</div>

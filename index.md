@@ -15,7 +15,7 @@ in the codex.
 * [Juxta Sagittaria](codex/Juxta_Sagittaria)
 * [Railgun](codex/Railgun)
 * [Quantum drive](codex/Quantum_drive)
-* [Sol](Sol)
+* [Sol](codex/Sol)
 * [Solstice War](codex/Solstice_War)
 * [Terran Federation](codex/Terran_Federation)
 * [Venaulie](codex/Venaulie)
