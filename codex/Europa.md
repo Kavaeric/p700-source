@@ -14,7 +14,7 @@ categories: Locations
     cattime="11M 610"
     demonym="Europan"
 
-    dist="670 900" 
+    dist=670900 
     year="3.55d"
     ecc="0.009"
     sidereal="3.55d"
@@ -24,8 +24,8 @@ categories: Locations
     radius=1561 
     grav=1.43
 
-    pressure="0"
-    kmeantemp="110"
+    pressure=0
+    kmeantemp=110
 
     pop="80,000"
     affil="[Terran Federation](Terran_Federation)"

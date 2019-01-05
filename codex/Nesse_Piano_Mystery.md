@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Nesse Piano Mystery
-accent: var(--cl-default)
+accent: var(--cl-purple)
 section: Codex
 categories: Society
 ---
 
 The **Nesse Piano Mystery** is an unsolved mystery concerning pianos with the brand name "Nesse"
-scattered around various rural locations in [Juxta Sagittaria](Juxta_Sagittaria.html), with the
-first discoveries of the pianos being made in 691, 693, and 694. A total of 6 pianos have been
-found so far.
+scattered around various rural locations in [Juxta Sagittaria](Juxta_Sagittaria), with the first
+discoveries of the pianos being made shortly after the conclusion of the [Solstice War](Solstice_War).
+In total, 19 pianos have been found.
 
 No real reasoning has been deduced from the discovery of the pianos, although some patterns have
 been observed:

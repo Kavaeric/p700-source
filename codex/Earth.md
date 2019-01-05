@@ -14,7 +14,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Terrene, Tellurian"
 
-    dist="149,598,000" 
+    dist=149598000 
     reldist="1.00"
     year="365.26d"
     ecc="0.0167"
@@ -29,13 +29,12 @@ categories: [Locations, Planets]
     grav=9.81
     age="4.45 Gy"
 
-    pressure="101.325"
-    relpressure="1.0"
+    pressure=101325
     composition="78.1% nitrogen gas<br>
                  21.0% oxygen gas<br>
                  ~1% water vapour<br>
                  < 1% other gases<br>"
-    ktemp="287"
+    ktemp=287
 
     pop="15.676 billion (surface)"
     affil="[Terran Federation](Terran_Federation)"

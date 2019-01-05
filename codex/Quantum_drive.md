@@ -6,14 +6,15 @@ section: Codex
 category: Technology
 ---
 A **quantum drive** (**hyperspace drive**, or **hyperdrive**) is a device that allows a vehicle to
-enter and exit [hyperspace](Hyperspace.html). It is used to achieve
-[faster-than-light travel](Faster-than-light_travel.html). Since its widespread adoption following
-the [First Exchange](First_Exchange.html) in the 200s and 300s century, it has complimented the
-older [warp drive](Warp_drive.html).
-{% include modal.html file="quantum_drive.gif" selfthumb=true %}
+enter and exit [hyperspace](Hyperspace). It is used to achieve [faster-than-light travel](Faster-than-light_travel).
+Since its widespread adoption following the [First Exchange](First_Exchange) in the 200s and 300s
+century, it has complimented the older [warp drive](Warp_drive) in allowing high-speed travel across
+interstellar distances once thought impossible.
+
+{%- include modal.html file="quantum_drive.gif" selfthumb=true -%}
 
 The invention of the quantum drive and quick adoption was regarded as a pivotal cause for the
-[Solstice War](Solstice_War.html).
+[Solstice War](Solstice_War).
 
 ## Theory 
 While nominal (normal) space consists of only 3 spatial dimensions, an additional 8 can be
@@ -28,10 +29,10 @@ then results in the journey taking much less time than would be possible in nomi
 which would effectively have made the journey speed faster than light.
 
 ## Comparison to the warp drive
-The most notable difference between the [warp drive](Warp_drive.html) and the quantum drive is
+The most notable difference between the [warp drive](Warp_drive) and the quantum drive is
 that the quantum drive is not actually a propulsion mechanism, instead only facilitating the transit
 between nominal space and hyperspace. A spacecraft will still require some other form of more
-conventional transport, such as a [casimir drive](Casimir_drive.html).
+conventional transport, such as a [casimir drive](Casimir_drive).
 
 Even early in the adoption of the quantum drive, journeys through hyperspace were found to be even
 faster than those with the older warp drive system. Because the quantum drive is not a propulsion
@@ -40,7 +41,7 @@ even more.
 
 ## Limitations
 As the quantum drive travel requires transit through hyperspace, scattered pockets of
-[antimatter](Antimatter.html) pose a threat to any craft that may come into contact in hyperspace.
+[antimatter](Antimatter) pose a threat to any craft that may come into contact in hyperspace.
 Hyperspace can be charted and monitored, however areas of lower traffic or uncharted space may be
 much riskier for quantum drive vehicles. Thus, exploration of uncharted space must be done with
 much slower warp drives, limiting the speed as to how many new systems can be charted and examined

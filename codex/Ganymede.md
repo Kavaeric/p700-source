@@ -14,7 +14,7 @@ categories: [Locations, Moons]
     cattime="11M 610"
     demonym="Ganymedian"
 
-    dist="1 1070 400" 
+    dist=11070400 
     year="7.15d"
     ecc="0.0013"
     sidereal="7.15d"
@@ -24,8 +24,8 @@ categories: [Locations, Moons]
     radius=2634
     grav=1.43
 
-    pressure="0"
-    kmeantemp="110"
+    pressure=0
+    kmeantemp=110
 
     pop="6.166 million"
     affil="[Terran Federation](Terran_Federation)"

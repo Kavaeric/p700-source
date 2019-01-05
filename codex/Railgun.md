@@ -21,13 +21,12 @@ widthwise electrical current, sending the armature (and projectile) lengthwise o
 ## Development
 Terran railgun weapons technology was being developed as early as the 000s century, promising to
 deliver higher firepower and projectile speed than conventional chemical-propelled ballistic
-weapons. [Metallurgy](Metallurgy.html) at the time, however, had not yet advanced far enough to make
-the technology practical even for heavy artillery. Thus, the rails of early prototypes would
-destroy themselves from the heat and electrical current, needing to be repaired or outright
-replaced after every shot.
+weapons. Metallurgy at the time, however, had not yet advanced far enough to make the technology
+practical even for heavy artillery. Thus, the rails of early prototypes would destroy themselves from
+the heat and electrical current, needing to be repaired or outright replaced after every shot.
 
 Railguns were considered for the deployment of atmospheric aerosols during the
-[Terran climate change](Terran_Climate_Change.html) period of the 000s and 100s centuries, but was
+[Terran climate change](Terran_Climate_Change) period of the 000s and 100s centuries, but was
 scrapped in favour of dispersal from aircraft.
 
 ## Dual-stage railgun
@@ -66,4 +65,4 @@ performance, piercing ability, and also suppression of the bolt's sonic boom.
 It is common to tint bolts with various colours. Either through direct doping of the core or, less
 commonly, through injection to the rails, certain compounds can give rise to various shades of hue
 in the bolt. Certain compounds can be use, such as copper or calcium for blue and orange
-respectively, or through the use of [quantum dots](Quantum_Dots.html).
+respectively, or through the use of [quantum dots](Quantum_Dots).

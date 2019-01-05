@@ -13,7 +13,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Martian"
 
-    dist="227 939 000" 
+    dist=227939000 
     reldist="1.52"
     year="686.97d"
     ecc="0.0934"
@@ -23,14 +23,13 @@ categories: [Locations, Planets]
           Deimos<br>
           Numerous installations, many derelict"
 
-    mass=6.417
+    massBase=6.417
     massExp=23 
     radius=3390 
     grav=3.72
     age="4.45 Gy"
 
-    pressure="0.64"
-    relpressure="0.0063"
+    pressure=640
     composition="95.97% carbon dioxide<br>
                  1.93% argon<br>
                  1.89% nitrogen<br>

@@ -13,7 +13,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Mercurian"
 
-    dist="57 909 050" 
+    dist=57909050 
     reldist=".387"
     year="86.97d"
     ecc="0.206"
@@ -25,7 +25,7 @@ categories: [Locations, Planets]
     radius=2440
     grav=3.70
 
-    pressure="0"
+    pressure=0
     composition="43% oxygen<br>
                  25% sodium<br>
                  20% hydrogen<br>

@@ -14,7 +14,7 @@ categories: [Locations, Moons]
     cattime="Ancient"
     demonym="Lunar"
 
-    dist="384 399" 
+    dist=384399 
     year="27.32d"
     ecc="0.0549"
     sidereal="27.32d"
@@ -25,10 +25,10 @@ categories: [Locations, Moons]
     radius=1737 
     grav=1.62
 
-    pressure="0"
-    khightemp="400"
-    kmeantemp="180"
-    klowtemp="100"
+    pressure=0
+    khightemp=400
+    kmeantemp=180
+    klowtemp=100
 
     pop="819.255 million"
     affil="[Terran Federation](Terran_Federation)"

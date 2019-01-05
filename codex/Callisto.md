@@ -14,7 +14,7 @@ categories: [Locations, Moons]
     cattime="11M 610"
     demonym="Callistoan"
 
-    dist="1 882 700" 
+    dist=1882700 
     year="16.69d"
     ecc="0.0074"
     sidereal="16.69d"
@@ -25,7 +25,7 @@ categories: [Locations, Moons]
     radius=2410
     grav=1.24
 
-    pressure="0"
+    pressure=0
 
     pop="19.130 million"
     affil="[Terran Federation](Terran_Federation)"

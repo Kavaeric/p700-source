@@ -13,7 +13,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Jovian"
 
-    dist="778 580 000" 
+    dist=778580000 
     reldist="5.20"
     year="11.862y"
     ecc="0.0489"

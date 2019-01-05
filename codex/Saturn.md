@@ -15,8 +15,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Saturnian"
 
-    dist="1 514 500"
-    reldist="9.58"
+    dist=1433530000
     year="29.457y"
     ecc="0.0489"
     sidereal="10h 33m"
@@ -76,11 +75,16 @@ development resumed at an accelerated pace around Saturn as a mining hub for lig
 fuels from the gas giant's atmosphere. Proposals to terraform the moons were revived, although mostly
 scaled back.
 
+In 611, a [Nesse Piano](Nesse_Piano_Mystery) was found on [Rhea](Rhea).
+
 ## Habitation
 A number of moons around Saturn have been partially terraformed, namely portions of [Rhea](Rhea),
 portions of [Dione](Dione), as well as portions of [Tethys](Tethys). These pockets of terraforming
 are achieved by sectioning portions of the moon into airtight regions with transparent roofs, then
 importing air, water, and vegetation to achieve an [Earthlike](Earth) environment.
+
+{%- include modal.html file="Rhea.jpg" align="right"
+   caption="[Rhea](Rhea), Saturn's most populated moon." -%}
 
 The terraforming of [Titan](Titan) was proposed prior to the Solstice War, but never came to fruition
 as Titan's computation-based economy relies heavily on the planet's dense atmosphere and frigid

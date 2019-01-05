@@ -13,7 +13,7 @@ categories: [Locations, Planets]
     cattime="Ancient"
     demonym="Venusian, Venerean"
 
-    dist="108 208 000"
+    dist=108208000
     reldist="0.72"
     year="224.70d"
     ecc="0.0068"
@@ -26,13 +26,11 @@ categories: [Locations, Planets]
     grav=gi8.87
     age="4.45 Gy"
 
-    pressure="9,200"
-    relpressure="90.80"
+    pressure=9200000
     composition="96.49% carbon dioxide<br>
                  3.50% nitrogen<br>
                  < 1% other gases<br>"
-    temp="467"
-    ktemp="742"
+    ktemp=742
 
     pop="240.483 million"
     affil="[Terran Federation](Terran_Federation)"
@@ -69,8 +67,8 @@ surface temperature.
 
 ### Resources
 Venus's carbon dioxide-rich atmosphere and proximity to Earth make it a lucrative mining world for
-[carbon](Carbon), which is in turn used for a variety of carbon-based materials, including
-various superalloys and [nanomaterials](Nanomaterial).
+[carbon](Carbon), which is in turn used for a variety of [carbon-based materials](Carbon_materials),
+including various superalloys.
 
 Although Venus' surface is likely rich in various metals, the harsh atmospheric conditions make
 any sort of surface mining extremely difficult and uncompetitive.

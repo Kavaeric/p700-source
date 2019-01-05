@@ -18,12 +18,12 @@ div.fancybox_container {
         float: left;
         clear: left;
         margin-left: 0; /* No spacing between the edge of the box and the edge of the content div */
-        margin-right: 3em;
+        margin-right: 1em;
     }
     div.fancybox_container.right {
         float: right;
         clear: right;
-        margin-left: 3em;
+        margin-left: 1em;
         margin-right: 0;
     }
 }
@@ -34,10 +34,10 @@ a[data-fancybox] {
 }
 a[data-fancybox]:hover,
 a[data-fancybox]:focus {
-    background: var(--cl-w5);
+    background: var(--cl-w10);
 }
 a[data-fancybox]:active {
-    background: var(--cl-w10);
+    background: var(--cl-w20);
 }
 
 a[data-fancybox] > img {

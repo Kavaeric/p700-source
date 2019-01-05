@@ -15,16 +15,15 @@ categories: [Locations, Stars]
 
     class="G2V"
     mag="4.83"
-    temp="5,773"
+    temp=5773
 
-    mass="1.99 &#215; 10<sup>30</sup>"
-    relmass=1
+    massBase=1.989
+    massExp=30
     radius=696400
-    relradius=1
     grav=274
     age="4.45 Gy"
     
-    pop="~15.6 billion"
+    pop="~18 billion"
     affil="[Terran Federation](Terran_Federation)"
     settled="Prehistoric"
 %}
