@@ -14,6 +14,7 @@
     --cl-green: #4effc4;
     --cl-blue: #4f87ff;
     --cl-bluegrey: #9dadd1;
+    --cl-indigo: #5334ff;
 
     --cl-w5:  rgba(255, 255, 255, .05);
     --cl-w10: rgba(255, 255, 255, .1);
@@ -191,18 +192,18 @@ blockquote > p {
 
 /* Custom bullet styling */
 ul {
+    position: relative;
     list-style: none;
     margin-left: 0;
-    padding-left: 0;
+	padding-left: 1.2em;
 }
 ul li {
-    margin: .4em 0;
-    padding-left: 1em;
-    text-indent: -1em;
+    line-height: 1.8em;
 }
 ul li:before {
     content: "\25B8";
-    padding-right: 5px;
+	left: 0;
+    position: absolute;
     color: var(--cl-w50);
 }
 

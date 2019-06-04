@@ -20,6 +20,7 @@ categories: [Locations, Planets]
     ecc="0.0489"
     sidereal="10h 33m"
     synodic="10h 32m"
+    axial=26.7
     sats="[Titan](Titan)<br>
           [Rhea](Rhea)<br>
           [Dione](Dione)<br>
@@ -75,7 +76,7 @@ development resumed at an accelerated pace around Saturn as a mining hub for lig
 fuels from the gas giant's atmosphere. Proposals to terraform the moons were revived, although mostly
 scaled back.
 
-In 611, a [Nesse Piano](Nesse_Piano_Mystery) was found on [Rhea](Rhea).
+In 635, a [Nesse Piano was found](Nesse_Piano_Mystery) on [Rhea](Rhea).
 
 ## Habitation
 A number of moons around Saturn have been partially terraformed, namely portions of [Rhea](Rhea),
@@ -103,7 +104,7 @@ alignments such as the [Anarchist](Anarchist_Party) or [Social Market](Social_Ma
 
 ## Economy
 Saturn's economy is primarily based on mining its atmosphere for fuels like hydrogen, and helium-3,
-as well as a number of other gases including helium-3 and methane. Atmospheric mining is done on board
+as well as a number of other gases including helium-4 and methane. Atmospheric mining is done on board
 aerostat installations within Saturn's atmosphere, that passively collect gases and refine them using
 onboard facilities. These facilities are often powered by networks of wind turbines, situated deeper
 in the Saturnian atmosphere. Transport shuttles continuously ferry material and passengers from these

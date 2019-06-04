@@ -19,6 +19,7 @@ categories: [Locations, Planets]
     ecc="0.206"
     sidereal="58.67d"
     synodic="175.94d"
+    axial=0.0
 
     massBase=3.301
     massExp=23

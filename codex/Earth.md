@@ -20,6 +20,7 @@ categories: [Locations, Planets]
     ecc="0.0167"
     sidereal="23h 56m 4s"
     synodic="24h"
+    axial="23.4"
     sats="[Luna](Luna)<br>
           Thousands of artificial installations"
 

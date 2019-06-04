@@ -7,7 +7,7 @@ categories: [Weapon, Railgun, Technology]
 ---
 {%- include infobox_railgun.html
     name="Kadote"
-    fullname="Tasuno Kadote IAR"
+    fullname="Tasune Kadote IAR"
 
     type="Infantry automatic railgun"
     affil="[Terran Federation](Terran Federation)"
@@ -32,10 +32,14 @@ categories: [Weapon, Railgun, Technology]
     rate=980
     -%}
 
-The **Tasuno Kadote** (previously known as the **Triton Kadote**) is a infantry automatic [railgun](railgun)
-designed by the [Tasuno](Tasuno) co-op.
+The **Tasune Kadote** (previously known as the **Triton Kadote**) is a infantry automatic [railgun](railgun)
+designed by the [Tasune](Tasune) co-op.
 
 The Kadote was developed as a competitor during the [Terran Shock Army](Terran_Shock_Army)'s competition
 of 660, to replace the [Kuroke](Kuroke_Techsystems) [Type 206](Type_206), beating Kuroke's own
 [Type 230](Type_230). The Kadote would later be adopted by the [Terran Militia](Terran_Militia) as
 well.
+
+## Design
+The Kadote is a dual-stage railgun that fires tungstic cores, and is constructed of a mix of [carbonite](Carbonite)
+and polymer materials. The rifle has a removable polymer covering that can be swapped 

@@ -17,8 +17,10 @@
             <td colspan="2">
                 <a data-fancybox="gallery" href="media/{{include.image}}">
                     <img src="media/thumb-{{include.image}}">
-                    <span>{{ include.caption }}</span>
                 </a>
+                <div class="caption">
+                    {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+                </div>
             </td>
         </tr>
         {%- endif -%}
@@ -99,8 +101,8 @@
             <td>{{ include.velocity | intcomma }} m/s</td>
         </tr>
         {%- if include.coreComp == "tungstic" -%}
-            {%- assign mass60 = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 14.750 | times: 0.001 -%}
-            {%- assign mass87 = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 17.788 | times: 0.001 -%}
+            {%- assign mass60 = include.coreDimX | times: include.coreDimX | times: include.coreDimY | times: 14.750 | times: 0.001 -%}
+            {%- assign mass87 = include.coreDimX | times: include.coreDimX | times: include.coreDimY | times: 17.788 | times: 0.001 -%}
             {%- assign energyKin60 = mass60 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
             {%- assign energyKin87 = mass87 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
             <tr>
@@ -112,7 +114,7 @@
                 <td>{{ energyKin87 | round | intcomma }} J</td>
             </tr>
         {%- elsif include.coreComp == "ferrous" -%}
-            {%- assign massFe = include.coreDimX | times: include.coreDimX | divided_by: 2.0 | times: include.coreDimY | times: 9.85 | times: 0.001 -%}
+            {%- assign massFe = include.coreDimX | times: include.coreDimX | times: include.coreDimY | times: 9.85 | times: 0.001 -%}
             {%- assign energyKinFe = mass60 | divided_by: 2.0 | times: include.velocity | times: include.velocity | times: 0.001 -%}
             <tr>
                 <td class="infoname">Kinetic energy</td>

@@ -19,6 +19,7 @@ categories: [Locations, Planets]
     ecc="0.0934"
     sidereal="24h 37m 22s"
     synodic="24h 39m 35s"
+    axial=25.2
     sats="Phobos<br>
           Deimos<br>
           Numerous installations, many derelict"

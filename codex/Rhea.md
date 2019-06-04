@@ -63,10 +63,10 @@ for some time.
 In the waning years of the, interest in terraforming Rhea had re-emerged from the newly-established
 [Terran Federation](Terran_Federation) as part of its [Post-War Initiatives Programme](Post-War_Initiatives_Programme).
 Rhea was regarded as a prime candidate for terraforming in an effort to stabilise the economy of the
-outer Solar system. By the mid 500s century, large swathes of Rhea had been terraformed, with expansions
+outer Solar system. By the early 600s century, large swathes of Rhea had been terraformed, with expansions
 planned and underway.
 
-In 611, during surveying for a terraformed habitat expansion, a [Nesse Piano](Nesse_Piano_Mystery)
+In 635, during surveying for a terraformed habitat expansion, a [Nesse Piano](Nesse_Piano_Mystery)
 was found half-buried in a crater on Rhea's south pole.
 
 ## Geography

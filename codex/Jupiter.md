@@ -19,6 +19,7 @@ categories: [Locations, Planets]
     ecc="0.0489"
     sidereal="9h 55m 30s"
     synodic="9h 55m 33s"
+    axial=3.1
     sats="Io<br>
           [Europa](Europa)<br>
           [Ganymede](Ganymede)<br>

@@ -23,7 +23,7 @@ categories: Factions
     gov="Federal parliamentary republic"
     exec="[Office of the Executors](Office_of_the_Executors.html)"
     legis="[Sagittaria Parliament](Sagittaria_Parliament.html)"
-    formation="12M 507"
+    formation="12M 610"
     
     currency="[&#8376; Geneva Taler](Geneva_Taler.html)"
     gdp="~&#8376;204 quadrillion"
@@ -83,8 +83,8 @@ regulations. In 368, the abolishment of many of the Terran Union's political par
 led to mass revolting, marking the beginning of the [Solstice War](Solstice_War.html), and with
 little control or recognition, the Terran Union dissolved.
 
-War ended in 507 with the signing of [Terran Accord](Terran_Accord.html). Shortly thereafter, the
-modern Terran Federation was founded with its capital based in Geneva.
+War ended in 608 with the signing of [Terran Accord](Terran_Accord.html). Shortly thereafter, in 610,
+the modern Terran Federation was incorporated with its capital based in Geneva.
 
 In 663, Terran surveyors first observed [Vilousian civilisation](Vilousian_Republic.html) on
 [Tal](Tal.html). After [second contact](Vilousian_contact.html) in 689, the Terran Federation
@@ -125,10 +125,9 @@ is the highest court power in the Terran Federation, presiding over three other 
 judicial court. The Terran Supreme reserves the power to strike down laws or acts from parliament.
 
 ### Military
-The [Terran Armed Forces](Terran_Armed_Forces.html) consist of some 10 million active troops, making
-it the largest single military force in history. In addition to its active branches, a further 48
-million troops are enlisted in the [Terra Militia](Terra_Militia.html), acting as the reserve
-branch of the Terran military and called upon during times of need.
+The [Terran Armed Forces](Terran_Armed_Forces.html) are split into two branches: The
+[Shock Armies](Shock_Army), which is the active serving branch of the military, and the
+[Militias](Militia), reserved for defensive purposes.
 
 Aside from national defense, the Terran military also serves an unstated second duty as a way for
 Terrans to gain life experience and travel the galaxy, as well as forming connections with others

@@ -9,7 +9,7 @@ categories: History
 {% include infobar_wip.html %}
 
 The **Solstice War** (the **Chorale War**, or the **Terran Civil War**) was a
-[Terran](Terran_Federation.html) conflict that lasted from 12E 368 to 12E 507. The war followed the
+[Terran](Terran_Federation.html) conflict that lasted from 12M 368 to 12M 507. The war followed the
 protests of political corruption in the [Terran Union](Terran_Union.html) parliament, and ultimately
 ended with its dissolution, with Terran space fracturing into multiple warring factions for well
 over a century, until the capture of [Geneva](Geneva.html) in 507 and the subsequent formation of
@@ -47,7 +47,6 @@ Terran authorities. While initially the unrest seemed to be under control, the s
 deteriorated.
 
 ### Escalation to violence
-
 Armed rebellion first appeared in the [Monkave](Monkave.html) and [Meridian](Meridian.html) systems
 in 370, where protestors began arming themselves against increasingly violent police and paramilitary
 peacekeeping forces. Monkave was captured in March 375, and declared itself independent of the
@@ -68,15 +67,25 @@ tactics. Fringe extremist and terrorist groups further complicated matters, usin
 attempt to grasp more power. Fighting was distributed amongst ground assaults, including those on
 Earth, as well as [aethership](Aethership.html) battles in space.
 
+### Fragmentation and infighting
 As the war progressed, the various fractured factions began to attempt to forge alliances, with
 varying amounts of success. Many Establishment groups attempted to form alliances with other
 likeminded factions, but rampant mistrust led to many of these ventures falling victim to infighting
 or further fragmentation.
 
-Revolutionary groups, however, fared better. In 463, a draft for what would become the
-[Terran Accord](Terran_Accord.html) was written by an alliance of rebellious groups, establishing
-their governance aboard a leviathan aethership, [Solidarity](Solidarity.html).
+Revolutionary groups similarly had a fair share of infighting and betrayal, spurred by differences in
+ideology and fears of a similarly oppressive Terran regime rising out of the old one. Over time,
+however, the various disparate factions began to attempt to seek ways of holding ceasefires between
+them, in an effort to attempt to concentrate their fighting efforts on Establishment forces. In 443,
+Monkave revolutionary forces discovered [Solidarity](Solidarity), then an AI on board a ship abandoned
+by the [Terran Union](Terran_Union) when withdrawing their forces from the local region. Solidarity
+was retrofitted and with an updated ship "body" as a result, now allied with revolutionary forces.
 
-In 489, the alliance launched an invasion of Earth, as the endgame for establishing a new Terran
-government. By 507, Geneva had been taken, and was incorporated as the capital for the newly-formed
+In 520, The [Wintertide Accord](Wintertide_Accord) was established as an elaborate truce between what
+would become the present-day [Social Democratic](Social_Democratic_Party) and
+[New Federalist](New_Federalist_Party) factions of Terran government. Over time, the truce evolved
+into an alliance, with numerous factions participating in its agreement.
+
+In 589, the alliance launched an invasion of Earth, as the endgame for establishing a new Terran
+government. By 608, Geneva had been taken, and was incorporated as the capital for the newly-formed
 [Terran Federation](Terran_Federation.html).

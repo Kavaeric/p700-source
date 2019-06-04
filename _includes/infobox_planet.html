@@ -85,6 +85,13 @@
         </tr>
         {%- endif -%}
 
+        {%- if include.axial != null -%}
+        <tr>
+            <td class="infoname">Axial tilt</td>
+            <td>{{ include.axial }}&#xb0;</td>
+        </tr>
+        {%- endif -%}
+
         {%- if include.sats != null -%}
         <tr>
             <td class="infoname">Satellites</td>
