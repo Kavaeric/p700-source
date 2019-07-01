@@ -34,17 +34,33 @@ categories: [Locations, Planets]
                  1% methane<br>
                  < 1% other gases and ices<br>"
 
-    pop="292.784 million"
+    pop="262.784 million"
     affil="[Terran Federation](Terran_Federation)"
     settled="12M 140"
     capital="Alexis"
     %}
 
-**Uranus** (**Sol h**) is an ice giant of [Sol](Sol). It has a dark blue or indigo colouration, with
+**Neptune** (**Sol i**) is an ice giant of [Sol](Sol). It has a striking dark blue colouration, with
 a wealth of varied atmospheric features that can be seen from orbit.
 
 ## History
--
+Given the planet's distance from [Earth](Earth) - over 10 astronomical units further than its inner
+neighbour, [Uranus](Uranus) - [Terran](Terran) settlement of Neptune remained slow during the Terran
+warp age. [Triton](Triton) was the first of the moons of Neptune to be settled on, and would remain
+the only significantly populated natural satellite of the ice giant.
+
+Economic interest in Neptune began to grow rapidly with future improvements to Terran [warp](Warp_drive)
+technology, and then eventually with the induction of the [antimatter](Antimatter) economy, with demand
+for hydrogen fueling investment into the planetary system.
+
+During the [Solstice War](Solstice_War), the Neptunian system offered an accessible strategic gateway
+into the Sol system. It is known that revolutionary forces would often hide within Neptune's deep and
+ferocious cloud cover to evade [Union](Terran_Union) forces, although such cover came with risk. It
+is estimated that hundreds of derelict craft may still be coasting within the Neptunian atmosphere.
+
+Like many of the moons of the Solar outer planets, Triton was subject to the partial closed terraforming
+of its surface, although its more remote location makes maintaining a comfortable day/night cycle
+more challenging than on other moons like [Rhea](Rhea).
 
 ## Society
 -

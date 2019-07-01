@@ -39,7 +39,7 @@ categories: [Locations, Planets]
                  2% methane<br>
                  < 1% other gases and ices<br>"
 
-    pop="280.355 million"
+    pop="190.355 million"
     affil="[Terran Federation](Terran_Federation)"
     settled="12M 111"
     capital="[Herschel](Herschel)"
